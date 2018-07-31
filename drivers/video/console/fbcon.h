@@ -105,6 +105,7 @@ struct fbcon_ops {
 #define attr_blink(s) \
 	((s) & 0x8000)
 	
+extern void fbcon_exit(void);
 
 static inline int mono_col(const struct fb_info *info)
 {
