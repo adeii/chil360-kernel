@@ -37,7 +37,9 @@
 #include <mach/msm_iomap.h>
 #include <mach/socinfo.h>
 #include <linux/sched.h>
-
+#ifdef CONFIG_LLCON
+#include <video/llcon.h>
+#endif
 /* fixme */
 #include <asm/tlbflush.h>
 #include <../../mm/mm.h>
