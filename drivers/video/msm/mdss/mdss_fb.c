@@ -40,6 +40,9 @@
 #include <linux/uaccess.h>
 #include <linux/version.h>
 #include <linux/vmalloc.h>
+#ifdef CONFIG_LLCON
+#include <video/llcon.h>
+#endif
 
 #include <mach/board.h>
 
