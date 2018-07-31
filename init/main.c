@@ -70,7 +70,9 @@
 #include <linux/perf_event.h>
 #include <linux/random.h>
 #include <linux/sched_clock.h>
-
+#ifdef CONFIG_LLCON
+#include <video/llcon.h>
+#endif
 #include <asm/io.h>
 #include <asm/bugs.h>
 #include <asm/setup.h>
@@ -779,6 +781,9 @@ static void __init do_initcalls(void)
  */
 static void __init do_basic_setup(void)
 {
+#ifdef CONFIG_LLCON
+	llcon_init();
+#endif
 	cpuset_init_smp();
 	usermodehelper_init();
 	shmem_init();
