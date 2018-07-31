@@ -3393,7 +3393,7 @@ need_resched:
 	rcu_note_context_switch(cpu);
 	prev = rq->curr;
 
-	schedule_debug(prev);
+ //	schedule_debug(prev);  // test to finish upon boot completed
 
 	if (sched_feat(HRTICK))
 		hrtick_clear(rq);
