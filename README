@@ -1,9 +1,10 @@
-NOTE: This is modd of chil360-kernel, made at first for SlimKat-9.x with display-legacy.
-Since display-caf based ROMs (KK/LP) cause kernel panic on wifi upload, all this changes are searching for source of problem.
-Kernel upgrade is not problem, because 3.4.104 experimental (display-caf) also cause kernel panic and reboot.
-Diffs between legacy and caf based kernel around net, netfilter, IPv6, pmem...etc, maybe cause panic, so let's tests...
-When kernel or something other is fixed, other branch (caf-based) could be used for other caf-based roms.
-THIS kernel (branch kitkat) is for display-legacy KitKat ROMs only!
+FRAMEBUFFER console work... in to infinity. No stop even booting is over!
+To enable FBcon, need changes:
+1. add line to BoardConfig.mk
+BOARD_KERNEL_CMDLINE += fbcon=font:VGA8x8,rotate:1 no_console_suspend=1
+
+2. add line to build.prop
+debug.sf.nobootanimation=1
 
 Linux kernel release 3.4.1xx <http://kernel.org/>
 
